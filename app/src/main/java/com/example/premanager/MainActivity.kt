@@ -8,26 +8,15 @@ import com.example.prefmanagerlib.PrefManager
 
 class MainActivity : AppCompatActivity() {
 
-    var mContext:Context = this
+    private var mContext: Context = this
+    private val mTag = MainActivity::class.simpleName
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        PrefManager.setBoolean("isLogin", true)
+        Log.e(mTag, "${PrefManager.getBoolean("isLogin")}")
 
-
-        PrefManager(mContext)
-            .setPreferenceName("")
-            .setPreferenceMode(0)
-            .setLinser(object :PrefManager.onPrefernceListner{
-                override fun onPreferenceInit() {
-                    Log.e("fff","cccccc cccccccc ccccccccccc cccccc");
-                }
-
-                override fun onError() {
-                    Log.e("fff","fffff");
-                }
-
-            })
-            .build()
     }
 }
