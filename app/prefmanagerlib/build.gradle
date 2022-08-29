@@ -40,18 +40,18 @@ android {
     }
 }
 
-//afterEvaluate {
-//    publishing {
-//        publications {
-//            release(MavenPublication) {
-//                from components.release
-//                groupId = 'com.github.Bashirkhalil'
-//                artifactId = 'downloadFileManager-lib'
-//                version = '1.0.0'
-//            }
-//        }
-//    }
-//}
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.Bashirkhalil'
+                artifactId = 'PreferenceManager-lib'
+                version = '1.0.0'
+            }
+        }
+    }
+}
 
 dependencies {
 
