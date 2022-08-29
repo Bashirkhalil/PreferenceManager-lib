@@ -22,32 +22,32 @@ class AppController  : Application(){
                     Log.e(mTag,"cccccc cccccccc ccccccccccc cccccc");
                 }
 
-                override fun onExceptionOccur(error: String) {
-                    Log.e(mTag,"Error occur -> $error")
+                override fun onExceptionOccur(error: String?) {
+                    Log.e(mTag,"error -> $error")
                 }
 
-                override fun onSaveString(key: String, value: String) {
+                override fun onSaveString(key: String, value: String?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
-                override fun onSaveInt(key: String, value: Int) {
+                override fun onSaveInt(key: String, value: Int?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
-                override fun onSaveFloat(key: String, value: Float) {
+                override fun onSaveFloat(key: String, value: Float?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
-                override fun onSaveBoolean(key: String, value: Boolean) {
+                override fun onSaveBoolean(key: String, value: Boolean?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
-                override fun onSaveLong(key: String, value: Long) {
+                override fun onSaveLong(key: String, value: Long?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
                 override fun onSaveSetString(key: String, value: Set<String?>?) {
-//                    Log.e(mTag,"Key = $key    -  value = $value")
+                    Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
             })
