@@ -3,6 +3,7 @@ package com.example.premanager
 import android.app.Application
 import android.util.Log
 import com.example.prefmanagerlib.PrefManager
+import org.json.JSONObject
 
 class AppController  : Application(){
 
@@ -18,37 +19,43 @@ class AppController  : Application(){
             .setPreferenceName("aa")
             .setPreferenceMode(MODE_PRIVATE)
             .setListener(object : PrefManager.OnPreferenceListener{
+
                 override fun onObjectInit() {
                     Log.e(mTag,"cccccc cccccccc ccccccccccc cccccc");
                 }
 
-                override fun onExceptionOccur(error: String) {
+                override fun onExceptionOccur(error: String?) {
                     Log.e(mTag,"Error occur -> $error")
                 }
 
-                override fun onSaveString(key: String, value: String) {
+                override fun onSaveString(key: String, value: String?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
-                override fun onSaveInt(key: String, value: Int) {
+                override fun onSaveInt(key: String, value: Int?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
-                override fun onSaveFloat(key: String, value: Float) {
+                override fun onSaveFloat(key: String, value: Float?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
-                override fun onSaveBoolean(key: String, value: Boolean) {
+                override fun onSaveBoolean(key: String, value: Boolean?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
-                override fun onSaveLong(key: String, value: Long) {
+                override fun onSaveLong(key: String, value: Long?) {
                     Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
                 override fun onSaveSetString(key: String, value: Set<String?>?) {
 //                    Log.e(mTag,"Key = $key    -  value = $value")
                 }
+
+                override fun onSaveJSON(key: String, values: JSONObject?) {
+                    TODO("Not yet implemented")
+                }
+
 
             })
             .build()
