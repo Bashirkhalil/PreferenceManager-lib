@@ -3,6 +3,7 @@ package com.example.premanager
 import android.app.Application
 import android.util.Log
 import com.example.prefmanagerlib.PrefManager
+import org.json.JSONObject
 
 class AppController  : Application(){
 
@@ -18,12 +19,13 @@ class AppController  : Application(){
             .setPreferenceName("aa")
             .setPreferenceMode(MODE_PRIVATE)
             .setListener(object : PrefManager.OnPreferenceListener{
+
                 override fun onObjectInit() {
                     Log.e(mTag,"cccccc cccccccc ccccccccccc cccccc");
                 }
 
                 override fun onExceptionOccur(error: String?) {
-                    Log.e(mTag,"error -> $error")
+                    Log.e(mTag,"Error occur -> $error")
                 }
 
                 override fun onSaveString(key: String, value: String?) {
@@ -47,8 +49,13 @@ class AppController  : Application(){
                 }
 
                 override fun onSaveSetString(key: String, value: Set<String?>?) {
-                    Log.e(mTag,"Key = $key    -  value = $value")
+//                    Log.e(mTag,"Key = $key    -  value = $value")
                 }
+
+                override fun onSaveJSON(key: String, values: JSONObject?) {
+                    TODO("Not yet implemented")
+                }
+
 
             })
             .build()
