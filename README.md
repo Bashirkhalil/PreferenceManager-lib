@@ -38,17 +38,13 @@ Kotlin library help you avoid the biller code in sharedpreferences  just inject 
 
 
     import android.app.Application
-   
     import android.util.Log
-
     import com.example.prefmanagerlib.PrefManager
-
     import org.json.JSONObject
 
     class AppController  : Application() {
 
     private val mTag = AppController::class.simpleName
-
     override fun onCreate() {
         super.onCreate()
 
@@ -107,15 +103,10 @@ Kotlin library help you avoid the biller code in sharedpreferences  just inject 
 
 
     import android.content.Context
-    
-    import androidx.appcompat.app.AppCompatActivity
-
+    import androidx.app.compat.app.AppCompatActivity
     import android.os.Bundle
-
     import android.util.Log
-
     import com.example.prefmanagerlib.PrefManager
-
     import org.json.JSONObject
 
     class MainActivity : AppCompatActivity() , PrefManager.OnPreferenceListener{
@@ -170,4 +161,4 @@ Kotlin library help you avoid the biller code in sharedpreferences  just inject 
     }
     }
 
-please  :fist_raised: I belive on other people ability they can develop more you can contributor and update :muscle: .
+please  :fist_raised: I belive on other people ability they can develop more than this shit :sunglasses: you can contributor and update :muscle: .
