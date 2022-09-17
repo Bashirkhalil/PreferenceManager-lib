@@ -5,7 +5,7 @@
 Kotlin library help you avoid the biller code in sharedpreferences  just inject the the object into top level application class and used any where . 
 
 
-## Features 
+## :heart: Features 
 
 1. set your the object into top-level in your application ( Application class ).
 2. set your reference name it's required  .
@@ -22,7 +22,9 @@ Kotlin library help you avoid the biller code in sharedpreferences  just inject 
 
 	allprojects {
 		repositories {
-			maven { url 'https://jitpack.io' }
+			maven { 
+			    url 'https://jitpack.io'
+			      }
 		}
 	}
 
@@ -31,7 +33,7 @@ Kotlin library help you avoid the biller code in sharedpreferences  just inject 
 	
      dependencies  {
        implementation 'com.github.Bashirkhalil:PreferenceManager-lib:last_verstion'
-     }
+                 }
 	
 
 ## :heart: Example 
