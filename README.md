@@ -37,15 +37,15 @@ Kotlin library help you avoid the biller code in sharedpreferences  just inject 
 ## :heart: Example 
 
 
-import android.app.Application
+    import android.app.Application
+   
+    import android.util.Log
 
-import android.util.Log
+    import com.example.prefmanagerlib.PrefManager
 
-import com.example.prefmanagerlib.PrefManager
+    import org.json.JSONObject
 
-import org.json.JSONObject
-
-class AppController  : Application() {
+    class AppController  : Application() {
 
     private val mTag = AppController::class.simpleName
 
@@ -89,13 +89,12 @@ class AppController  : Application() {
                 }
 
                 override fun onSaveSetString(key: String, value: Set<String?>?) {
-//                    Log.e(mTag,"Key = $key    -  value = $value")
+                    Log.e(mTag,"Key = $key    -  value = $value")
                 }
 
                 override fun onSaveJSON(key: String, values: JSONObject?) {
                     TODO("Not yet implemented")
                 }
-
 
             })
             .build()
@@ -103,18 +102,23 @@ class AppController  : Application() {
 
 
 
-## :heart: in your activity call or in everywhere  call the function
+## :heart: in your activity call or in everywhere  call the function put in your mind that listener is option if you don't like it don't add it .
 
 
 
-import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.util.Log
-import com.example.prefmanagerlib.PrefManager
-import org.json.JSONObject
+    import android.content.Context
+    
+    import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() , PrefManager.OnPreferenceListener{
+    import android.os.Bundle
+
+    import android.util.Log
+
+    import com.example.prefmanagerlib.PrefManager
+
+    import org.json.JSONObject
+
+    class MainActivity : AppCompatActivity() , PrefManager.OnPreferenceListener{
 
     private var mContext: Context = this
     private val mTag = MainActivity::class.simpleName
@@ -164,7 +168,6 @@ class MainActivity : AppCompatActivity() , PrefManager.OnPreferenceListener{
     override fun onSaveJSON(key: String, values: JSONObject?) {
         TODO("Not yet implemented")
     }
-
-}
+    }
 
 please  :fist_raised: I belive on other people ability they can develop more you can contributor and update :muscle: .
