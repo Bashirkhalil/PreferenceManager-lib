@@ -36,9 +36,13 @@ Kotlin library help you avoid the biller code in sharedpreferences  just inject 
 
 ## :heart: Example 
 
+
 import android.app.Application
+
 import android.util.Log
+
 import com.example.prefmanagerlib.PrefManager
+
 import org.json.JSONObject
 
 class AppController  : Application() {
